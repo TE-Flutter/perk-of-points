@@ -1,16 +1,8 @@
-# Perk Of Points app
+# Perk Of Points app 🎲
 
-A new Flutter project.
+A new Gleb's Flutter project 
 
-## Getting Started
+## Links 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🤌 [Figma](https://www.figma.com/file/pPm3GGw7BEI41xM5OGQST7/Perk-of-Points)
+🤌 [Adalo project for testing](https://previewer.adalo.com/7678621f-d46e-4d21-b5ca-37eaa205a1df)

@@ -1,4 +1,4 @@
-# course_example_app
+# Perk Of Points app
 
 A new Flutter project.
 

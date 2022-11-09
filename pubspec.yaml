@@ -34,6 +34,8 @@ dependencies:
   soar_quest:
     git:
       url: https://github.com/ElBatanony/soar_quest
+      ref: flutter-course
+
   firebase_core:
 
 

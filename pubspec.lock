@@ -438,11 +438,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: HEAD
-      resolved-ref: "0459fcb2a32726d1ab1ef24f6b43a219bf9656a2"
+      ref: flutter-course
+      resolved-ref: a9576b5ddeb9268da95fa585e7b2b8ad3d93d8d4
       url: "https://github.com/ElBatanony/soar_quest"
     source: git
-    version: "0.2.0"
+    version: "0.4.0"
   source_span:
     dependency: transitive
     description:

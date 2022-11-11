@@ -31,10 +31,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  soar_quest:
-    git:
-      url: https://github.com/ElBatanony/soar_quest
-      ref: flutter-course
+  soar_quest: 0.6.1
 
   firebase_core:
 

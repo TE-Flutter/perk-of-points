@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.course_example_app">
+    package="com.example.perk_of_points">
    <application
-        android:label="course_example_app"
+        android:label="perk_of_points"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

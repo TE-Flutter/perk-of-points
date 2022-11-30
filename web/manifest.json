@@ -1,6 +1,6 @@
 {
-    "name": "course_example_app",
-    "short_name": "course_example_app",
+    "name": "perk_of_points",
+    "short_name": "perk_of_points",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,4 +1,4 @@
-name: course_example_app
+name: perk_of_points
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -31,9 +31,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  soar_quest: 0.6.1
-
-  firebase_core:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -56,7 +53,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-  
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

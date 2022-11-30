@@ -49,11 +49,20 @@ class GamesListScreen extends StatelessWidget {
   Widget buildItem(BuildContext ctx, int index) {
     Game game = games[index];
 
-    return ListTile(
-      leading: const FlutterLogo(),
-      title: Text(game.title),
-      trailing: const Icon(Icons.chevron_right),
-      onTap: () => gotoDetailsScreen(ctx, game),
+    return Container(
+      child: ListTile(
+        leading: const FlutterLogo(),
+        title: Text(game.title),
+        onTap: () => gotoDetailsScreen(ctx, game),
+      ),
+      decoration: const BoxDecoration(
+        border: Border(
+          top: BorderSide(color: Color(0xFFFFFFFF)),
+          left: BorderSide(color: Color(0xFFFFFFFF)),
+          right: BorderSide(),
+          bottom: BorderSide(),
+        ),
+      ),
     );
   }
 
@@ -61,7 +70,9 @@ class GamesListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Game List')),
-      body: ListView.builder(
+      body: GridView.builder(
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemCount: games.length,
         itemBuilder: buildItem,
       ),
@@ -82,7 +93,7 @@ class GameDetailsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text('Taught by ${game.title}'),
+            Text('Game: ${game.title}'),
           ],
         ),
       ),

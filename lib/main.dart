@@ -49,18 +49,16 @@ class GamesListScreen extends StatelessWidget {
   Widget buildItem(BuildContext ctx, int index) {
     Game game = games[index];
 
-    return Container(
-      child: ListTile(
-        leading: const FlutterLogo(),
-        title: Text(game.title),
-        onTap: () => gotoDetailsScreen(ctx, game),
-      ),
-      decoration: const BoxDecoration(
-        border: Border(
-          top: BorderSide(color: Color(0xFFFFFFFF)),
-          left: BorderSide(color: Color(0xFFFFFFFF)),
-          right: BorderSide(),
-          bottom: BorderSide(),
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Container(
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: Colors.amber, borderRadius: BorderRadius.circular(15)),
+        child: ListTile(
+          leading: const FlutterLogo(),
+          title: Text(game.title),
+          onTap: () => gotoDetailsScreen(ctx, game),
         ),
       ),
     );
@@ -71,8 +69,11 @@ class GamesListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Game List')),
       body: GridView.builder(
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200,
+            childAspectRatio: 3 / 2,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 10),
         itemCount: games.length,
         itemBuilder: buildItem,
       ),

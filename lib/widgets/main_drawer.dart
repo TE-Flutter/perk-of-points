@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:perk_of_points/widgets/video_rules.dart';
 
 import '../screens/filters_screen.dart';
 import '../screens/info_screen.dart';
+import 'package:perk_of_points/widgets/video_rules.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTile(String title, IconData icon, VoidCallback tapHandler) {
@@ -53,6 +55,10 @@ class MainDrawer extends StatelessWidget {
           buildListTile('Info', Icons.info, () {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (BuildContext context) => InfoPageLink()));
+          }),
+          buildListTile('About app', Icons.video_call, () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => YoutubePlayerDemo()));
           }),
         ],
       ),

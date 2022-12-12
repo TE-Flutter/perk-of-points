@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/filters_screen.dart';
+import '../screens/info_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTile(String title, IconData icon, VoidCallback tapHandler) {
@@ -50,7 +51,8 @@ class MainDrawer extends StatelessWidget {
             Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
           }),
           buildListTile('Info', Icons.info, () {
-            Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => InfoPageLink()));
           }),
         ],
       ),

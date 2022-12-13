@@ -26,10 +26,8 @@ class MealItem extends StatelessWidget {
         return 'Simple';
       case Complexity.Challenging:
         return 'Challenging';
-        break;
       case Complexity.Hard:
         return 'Hard';
-        break;
       default:
         return 'Unknown';
     }

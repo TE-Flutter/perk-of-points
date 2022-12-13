@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:perk_of_points/widgets/fields_players.dart';
 
 import '../dummy_data.dart';
+
+import 'package:perk_of_points/widgets/fields_players.dart';
+import 'package:perk_of_points/widgets/video_rules.dart';
 
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
@@ -54,7 +58,7 @@ class MealDetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            buildSectionTitle(context, 'Rules'),
+            buildSectionTitle(context, 'Game set and rules'),
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Card(
@@ -69,23 +73,19 @@ class MealDetailScreen extends StatelessWidget {
                 itemCount: selectedMeal.ingredients.length,
               ),
             ),
-            buildSectionTitle(context, 'Video rules'),
+            buildSectionTitle(context, 'Lets start'),
             buildContainer(
-              ListView.builder(
-                itemBuilder: (ctx, index) => Column(
-                  children: [
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text('# ${(index + 1)}'),
-                      ),
-                      title: Text(
-                        selectedMeal.steps[index],
-                      ),
-                    ),
-                    Divider()
-                  ],
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TodoList()),
+                  );
+                },
+                child: const Text(
+                  'Start',
+                  style: TextStyle(fontSize: 60),
                 ),
-                itemCount: selectedMeal.steps.length,
               ),
             ),
           ],

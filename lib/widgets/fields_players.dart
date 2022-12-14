@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perk_of_points/models/players_list.dart';
 
 class Todo {
   Todo({required this.name, required this.checked});
@@ -28,7 +29,10 @@ class TodoItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        onTodoChanged(todo);
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SimpleCalculator()),
+        );
       },
       leading: CircleAvatar(
         child: Text(todo.name[0]),
